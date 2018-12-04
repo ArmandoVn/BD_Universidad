@@ -5,7 +5,6 @@
 
 --Creamos usuario administrdor
 
-
 --Creamos el usuario VAGU_proy_admin
 CREATE USER VAGU_proy_admin IDENTIFIED BY VAGUpa
 DEFAULT TABLESPACE USERS
