@@ -1,6 +1,6 @@
 --@Autor(es):       Gutiérrez Castillo Oscar, Valderrama Navarro Armando
 --@Fecha creación:  01/12/2018
---@Descripción:     <breve descripción del contenido y propósito del archivo>
+--@Descripción:     Funcion que regresa una cadena formateada conn los datos principales del alumno.
 create or replace function estudiante_carrera(
     v_estudiante_id number)
     return varchar2
@@ -19,8 +19,9 @@ begin
     where c.estduiante_id = v_estudiante_id
     and c.carrera_id = e.carrera_id;
 
-    v_datos_formateados := v_nombre || " " || v_apellido_paterno || " " || v_apellido_materno ||
-        " " v_numero_cuenta || " " || v_nombre_carrera;
+    v_datos_formateados := "El alumno " || v_nombre || " " || v_apellido_paterno || " " || 
+    v_apellido_materno || " con numero de cuenta " v_numero_cuenta || " pertenece a la carrera " 
+    || v_nombre_carrera;
     
     return v_datos_formateados;
 end;
